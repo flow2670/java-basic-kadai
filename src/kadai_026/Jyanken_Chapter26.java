@@ -1,7 +1,6 @@
 package kadai_026;
 
 import java.util.HashMap;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Jyanken_Chapter26 {
@@ -28,9 +27,9 @@ public class Jyanken_Chapter26 {
 	
 	public String getRandom() {
 		String[] rivals = {"r", "s", "p"};
-		Random random = new Random();
-		int randomIndex = random.nextInt(3);
-		return rivals[randomIndex]; //リターンの設定
+		// Math.random()は0.0以上1.0未満を返すので、3を掛けて0,1,2のいずれかに。Math.floorで整数部分を取得
+		int randomIndex = (int) Math.floor(Math.random() * 3);
+		return rivals[randomIndex]; 
 	}
 	
 	public void playGame() {
