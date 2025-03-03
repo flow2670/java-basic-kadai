@@ -29,7 +29,8 @@ public class Jyanken_Chapter26 {
 	public String getRandom() {
 		String[] rivals = {"r", "s", "p"};
 		Random random = new Random();
-		return rivals[random.nextInt(3)]; //リターンの設定
+		int randomIndex = random.nextInt(3);
+		return rivals[randomIndex]; //リターンの設定
 	}
 	
 	public void playGame() {
